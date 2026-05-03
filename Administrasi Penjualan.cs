@@ -75,7 +75,7 @@ class PelangganReguler : Pelanggan
 
     public override decimal HitungDiskon() {
         return base.HitungDiskon(); // Gunakan perhitungan diskon dari kelas dasar
-    }
+ }
 
 class PelangganVIP : Pelanggan
 {
@@ -115,26 +115,26 @@ class Teknisi : Person
             return 75000; // Komisi untuk teknisi komputer
         }
         return 0;
-            }
-        }
+    }
+}
 
 class KaryawanAdmin : Person
-        {
-            public string Divisi { get; set; }
-            public string LevelAkses { get; set; }
+{
+    public string Divisi { get; set; }
+    public string LevelAkses { get; set; }
 
-            public KaryawanAdmin(string Nama, string Alamat, int NoTelepon, string Divisi, string LevelAkses) : 
+    public KaryawanAdmin(string Nama, string Alamat, int NoTelepon, string Divisi, string LevelAkses) : 
                 base(Nama, Alamat, NoTelepon)
-            {
-                this.Divisi = Divisi;
-                this.LevelAkses = LevelAkses;
-            }
+    {
+        this.Divisi = Divisi;
+        this.LevelAkses = LevelAkses;
+    }
 
-            public override string GetInfo()
-            {
-                return $"Nama: {Nama}, Alamat: {Alamat}, No Telepon: {NoTelepon}, Divisi: {Divisi}, Level Akses: {LevelAkses}";
-            }
-        }
+    public override string GetInfo()
+    {
+        return $"Nama: {Nama}, Alamat: {Alamat}, No Telepon: {NoTelepon}, Divisi: {Divisi}, Level Akses: {LevelAkses}";
+    }
+}
 
 class sparepart : Produk
 {
@@ -153,4 +153,6 @@ class sparepart : Produk
         return double.Parse(harga); // Mengembalikan harga sebagai double
     }
 }
+
+
 
